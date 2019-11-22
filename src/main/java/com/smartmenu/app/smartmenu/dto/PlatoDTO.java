@@ -10,6 +10,7 @@ public class PlatoDTO implements Serializable {
 	private int codTipoPlato;
 	private String tipoPlato;
 	private String descripcionPlato;
+	private String imagenPlato;
 
 	public String getNombrePlato() {
 		return nombrePlato;
@@ -43,10 +44,18 @@ public class PlatoDTO implements Serializable {
 		this.descripcionPlato = descripcionPlato;
 	}
 
+	public String getImagenPlato() {
+		return imagenPlato;
+	}
+
+	public void setImagenPlato(String imagenPlato) {
+		this.imagenPlato = imagenPlato;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("PlatoDTO [nombrePlatp=");
+		builder.append("PlatoDTO [nombrePlato=");
 		builder.append(nombrePlato);
 		builder.append(", codTipoPlato=");
 		builder.append(codTipoPlato);
@@ -54,6 +63,8 @@ public class PlatoDTO implements Serializable {
 		builder.append(tipoPlato);
 		builder.append(", descripcionPlato=");
 		builder.append(descripcionPlato);
+		builder.append(", imagenPlato=");
+		builder.append(imagenPlato);
 		builder.append("]");
 		return builder.toString();
 	}

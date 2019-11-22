@@ -6,15 +6,15 @@ public class LoginInDTO implements Serializable {
 
 	private static final long serialVersionUID = -7640313028260996350L;
 
-	private int idUsuario;
+	private String usuario;
 	private String password;
 
-	public int getIdUsuario() {
-		return idUsuario;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setIdUsuario(int idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getPassword() {
@@ -28,8 +28,8 @@ public class LoginInDTO implements Serializable {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("LoginInDTO [idUsuario=");
-		builder.append(idUsuario);
+		builder.append("LoginInDTO [usuario=");
+		builder.append(usuario);
 		builder.append(", password=");
 		builder.append(password);
 		builder.append("]");

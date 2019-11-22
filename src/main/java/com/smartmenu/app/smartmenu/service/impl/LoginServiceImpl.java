@@ -20,15 +20,15 @@ public class LoginServiceImpl implements LoginService {
 
 		LoginOutDTO loginOutDTO = new LoginOutDTO();
 
-		UsuarioEntity usuarioEntityUsu = usuarioRepository.findByIdUsuario(Long.valueOf(in.getIdUsuario()));
+		UsuarioEntity usuarioEntityUsu = usuarioRepository.findByUsuario(in.getUsuario());
 		if (usuarioEntityUsu == null) {
 			loginOutDTO.setCodmsj(1);
 			loginOutDTO.setMensaje("Usuario no existe");
 			return loginOutDTO;
 		}
 
-		UsuarioEntity usuarioEntityPass = usuarioRepository
-				.findByIdUsuarioAndClaveUsuario(Long.valueOf(in.getIdUsuario()), in.getPassword());
+		UsuarioEntity usuarioEntityPass = usuarioRepository.findByUsuarioAndClaveUsuario(in.getUsuario(),
+				in.getPassword());
 		if (usuarioEntityPass == null) {
 			loginOutDTO.setCodmsj(2);
 			loginOutDTO.setMensaje("Clave incorrecta");

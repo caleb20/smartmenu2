@@ -8,8 +8,8 @@ import com.smartmenu.app.smartmenu.entity.UsuarioEntity;
 @Repository
 public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Long> {
 
-	UsuarioEntity findByIdUsuario(Long id);
+	UsuarioEntity findByUsuario(String usuario);
 
-	UsuarioEntity findByIdUsuarioAndClaveUsuario(Long id, String pass);
+	UsuarioEntity findByUsuarioAndClaveUsuario(String usuario, String pass);
 
 }

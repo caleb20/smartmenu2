@@ -22,6 +22,9 @@ public class PlatoEntity {
 	@Column(name = "descripcion")
 	private String descripcion_plato;
 
+	@Column(name = "imagen")
+	private String imagen;
+
 	public Long getCod_plato() {
 		return cod_plato;
 	}
@@ -54,6 +57,14 @@ public class PlatoEntity {
 		this.descripcion_plato = descripcion_plato;
 	}
 
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -63,8 +74,10 @@ public class PlatoEntity {
 		builder.append(nom_plato);
 		builder.append(", tipo_plato=");
 		builder.append(tipo_plato);
-		builder.append(", descripocion_plato=");
+		builder.append(", descripcion_plato=");
 		builder.append(descripcion_plato);
+		builder.append(", imagen=");
+		builder.append(imagen);
 		builder.append("]");
 		return builder.toString();
 	}

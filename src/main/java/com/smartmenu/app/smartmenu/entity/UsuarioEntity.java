@@ -19,6 +19,9 @@ public class UsuarioEntity {
 	@Column(name = "rolusuario")
 	private String rolUsuario;
 
+	@Column(name = "usuario")
+	private String usuario;
+
 	@Column(name = "claveusuario")
 	private String claveUsuario;
 
@@ -54,6 +57,14 @@ public class UsuarioEntity {
 		this.claveUsuario = claveUsuario;
 	}
 
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -63,6 +74,8 @@ public class UsuarioEntity {
 		builder.append(idTrabajador);
 		builder.append(", rolUsuario=");
 		builder.append(rolUsuario);
+		builder.append(", usuario=");
+		builder.append(usuario);
 		builder.append(", claveUsuario=");
 		builder.append(claveUsuario);
 		builder.append("]");

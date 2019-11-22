@@ -29,6 +29,7 @@ public class PlatoServiceImpl implements PlatoService {
 			plato.setCodTipoPlato(platoEntity.getTipo_plato());
 			plato.setTipoPlato(getTipo(platoEntity.getTipo_plato()));
 			plato.setDescripcionPlato(platoEntity.getDescripcion_plato());
+			plato.setImagenPlato(platoEntity.getImagen());
 			platos.add(plato);
 		}
 
@@ -37,7 +38,7 @@ public class PlatoServiceImpl implements PlatoService {
 
 	private String getTipo(int tipo_plato) {
 		String tipo = "";
-		
+
 		switch (tipo_plato) {
 		case 1:
 			tipo = "Fondo";
