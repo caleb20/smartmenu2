@@ -65,6 +65,7 @@ public class PedidoServiceImpl implements PedidoService {
 				detalleOut.setIdPlato(detalle.getIdPlato());
 				detalleOut.setNombrePlato(platoRepository.findById(detalle.getIdPlato()).get().getNom_plato());
 				detalleOut.setPrecioxPlato(cantidad * platoRepository.findById(detalle.getIdPlato()).get().getPrecio());
+				detalleOut.setCantidad(cantidad);
 				detalleOut.setCodMensaje(0);
 				detalleOut.setMensaje(
 						platoRepository.findById(detalle.getIdPlato()).get().getNom_plato() + " Registrado con éxito");
