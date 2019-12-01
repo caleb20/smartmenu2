@@ -22,7 +22,7 @@ public class PedidoController {
 	PedidoService pedidoService;
 
 	@PostMapping("/registro")
-	public ResponseEntity<PedidoOutDTO> login(@RequestBody PedidoInDTO pedido) {
+	public ResponseEntity<PedidoOutDTO> pedido(@RequestBody PedidoInDTO pedido) {
 
 		PedidoOutDTO pedidoDTO = pedidoService.pedido(pedido);
 

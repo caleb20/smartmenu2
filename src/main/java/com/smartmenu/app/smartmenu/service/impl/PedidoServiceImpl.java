@@ -92,6 +92,8 @@ public class PedidoServiceImpl implements PedidoService {
 			pedidoEntity.setFechapedido(new Date());
 			pedidoEntity.setMontototalpedido(pedido.getMontoTotal());
 			pedidoRepository.save(pedidoEntity);
+		} else {
+			pedidoRepository.delete(pedidoEntity);
 		}
 
 		return pedidos;
