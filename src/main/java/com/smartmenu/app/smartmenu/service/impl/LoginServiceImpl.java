@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service;
 
 import com.smartmenu.app.smartmenu.dto.LoginInDTO;
 import com.smartmenu.app.smartmenu.dto.LoginOutDTO;
+import com.smartmenu.app.smartmenu.entity.TrabajadorEntity;
 import com.smartmenu.app.smartmenu.entity.UsuarioEntity;
+import com.smartmenu.app.smartmenu.repository.TrabajadorRepository;
 import com.smartmenu.app.smartmenu.repository.UsuarioRepository;
 import com.smartmenu.app.smartmenu.service.LoginService;
 
@@ -14,6 +16,9 @@ public class LoginServiceImpl implements LoginService {
 
 	@Autowired
 	UsuarioRepository usuarioRepository;
+
+	@Autowired
+	TrabajadorRepository trabajadorRepository;
 
 	@Override
 	public LoginOutDTO login(LoginInDTO in) {
@@ -36,6 +41,8 @@ public class LoginServiceImpl implements LoginService {
 		}
 
 		loginOutDTO.setCodmsj(0);
+		loginOutDTO.setUsuario(trabajadorRepository.findById(Long.valueOf(usuarioEntityPass.getIdTrabajador())
+				).get().getNom_trabajador());
 		loginOutDTO.setMensaje("Login correcto");
 
 		return loginOutDTO;

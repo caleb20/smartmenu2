@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.smartmenu.app.smartmenu.dto.PlatoDTO;
 import com.smartmenu.app.smartmenu.entity.PlatoEntity;
 import com.smartmenu.app.smartmenu.repository.PlatoRepository;
+import com.smartmenu.app.smartmenu.repository.StockRepository;
 import com.smartmenu.app.smartmenu.service.PlatoService;
 
 @Service
@@ -16,6 +17,9 @@ public class PlatoServiceImpl implements PlatoService {
 
 	@Autowired
 	PlatoRepository platoRepository;
+
+	@Autowired
+	StockRepository stockRepository;
 
 	@Override
 	public List<PlatoDTO> obtenerTodos() {
@@ -30,6 +34,7 @@ public class PlatoServiceImpl implements PlatoService {
 			plato.setTipoPlato(getTipo(platoEntity.getTipo_plato()));
 			plato.setDescripcionPlato(platoEntity.getDescripcion_plato());
 			plato.setImagenPlato(platoEntity.getImagen());
+			plato.setStock(stockRepository.findById(platoEntity.getCod_plato()).get().getCantidaddisponible());
 			platos.add(plato);
 		}
 

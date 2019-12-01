@@ -6,11 +6,20 @@ public class PlatoDTO implements Serializable {
 
 	private static final long serialVersionUID = 3077261064137677306L;
 
-	private String nombrePlato;
 	private int codTipoPlato;
+	private String nombrePlato;
 	private String tipoPlato;
 	private String descripcionPlato;
+	private int stock;
 	private String imagenPlato;
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
 
 	public String getNombrePlato() {
 		return nombrePlato;
