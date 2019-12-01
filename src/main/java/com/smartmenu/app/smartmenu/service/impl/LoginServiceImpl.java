@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import com.smartmenu.app.smartmenu.dto.LoginInDTO;
 import com.smartmenu.app.smartmenu.dto.LoginOutDTO;
-import com.smartmenu.app.smartmenu.entity.TrabajadorEntity;
 import com.smartmenu.app.smartmenu.entity.UsuarioEntity;
 import com.smartmenu.app.smartmenu.repository.TrabajadorRepository;
 import com.smartmenu.app.smartmenu.repository.UsuarioRepository;

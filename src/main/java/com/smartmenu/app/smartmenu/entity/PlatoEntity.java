@@ -22,8 +22,19 @@ public class PlatoEntity {
 	@Column(name = "descripcion")
 	private String descripcion_plato;
 
+	@Column(name = "precio")
+	private double precio;
+
 	@Column(name = "imagen")
 	private String imagen;
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
 
 	public Long getCod_plato() {
 		return cod_plato;

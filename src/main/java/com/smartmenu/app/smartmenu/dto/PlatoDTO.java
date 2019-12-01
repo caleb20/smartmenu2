@@ -11,7 +11,16 @@ public class PlatoDTO implements Serializable {
 	private String tipoPlato;
 	private String descripcionPlato;
 	private int stock;
+	private double precio;
 	private String imagenPlato;
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
 
 	public int getStock() {
 		return stock;

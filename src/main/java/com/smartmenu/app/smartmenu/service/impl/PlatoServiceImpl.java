@@ -34,6 +34,7 @@ public class PlatoServiceImpl implements PlatoService {
 			plato.setTipoPlato(getTipo(platoEntity.getTipo_plato()));
 			plato.setDescripcionPlato(platoEntity.getDescripcion_plato());
 			plato.setImagenPlato(platoEntity.getImagen());
+			plato.setPrecio(platoEntity.getPrecio());
 			plato.setStock(stockRepository.findById(platoEntity.getCod_plato()).get().getCantidaddisponible());
 			platos.add(plato);
 		}
