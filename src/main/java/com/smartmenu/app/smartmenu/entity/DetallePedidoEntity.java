@@ -28,6 +28,17 @@ public class DetallePedidoEntity {
 	@Column(name = "precioxcantidad")
 	private String precioxcantidad;
 
+	@Column(name = "idusuario")
+	private int idusuario;
+
+	public int getIdusuario() {
+		return idusuario;
+	}
+
+	public void setIdusuario(int idusuario) {
+		this.idusuario = idusuario;
+	}
+
 	public Long getIddetallepedido() {
 		return iddetallepedido;
 	}

@@ -2,7 +2,7 @@ package com.smartmenu.app.smartmenu.dto;
 
 import java.io.Serializable;
 
-public class DetallePedidoDTO implements Serializable {
+public class DetallePedidoInDTO implements Serializable {
 
 	private static final long serialVersionUID = 401850464310447431L;
 

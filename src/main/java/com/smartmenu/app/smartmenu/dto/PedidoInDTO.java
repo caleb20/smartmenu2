@@ -7,26 +7,26 @@ public class PedidoInDTO implements Serializable {
 
 	private static final long serialVersionUID = -724863918400917794L;
 
-	private String idUsuario;
+	private String usuario;
 
 	private double montoTotal;
 
-	private List<DetallePedidoDTO> detalle;
+	private List<DetallePedidoInDTO> detalle;
 
-	public List<DetallePedidoDTO> getDetalle() {
+	public List<DetallePedidoInDTO> getDetalle() {
 		return detalle;
 	}
 
-	public void setDetalle(List<DetallePedidoDTO> detalle) {
+	public void setDetalle(List<DetallePedidoInDTO> detalle) {
 		this.detalle = detalle;
 	}
 
-	public String getIdUsuario() {
-		return idUsuario;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setIdUsuario(String idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public double getMontoTotal() {
