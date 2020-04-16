@@ -11,13 +11,13 @@ public class PlatoEntity {
 
 	@Id
 	@Column(name = "codplato")
-	private Long cod_plato;
+	private Long codPlato;
 
 	@Column(name = "nomplato")
-	private String nom_plato;
+	private String nomPlato;
 
 	@Column(name = "tipoplato")
-	private int tipo_plato;
+	private int tipoPlato;
 
 	@Column(name = "descripcion")
 	private String descripcion_plato;
@@ -36,29 +36,6 @@ public class PlatoEntity {
 		this.precio = precio;
 	}
 
-	public Long getCod_plato() {
-		return cod_plato;
-	}
-
-	public void setCod_plato(Long cod_plato) {
-		this.cod_plato = cod_plato;
-	}
-
-	public String getNom_plato() {
-		return nom_plato;
-	}
-
-	public void setNom_plato(String nom_plato) {
-		this.nom_plato = nom_plato;
-	}
-
-	public int getTipo_plato() {
-		return tipo_plato;
-	}
-
-	public void setTipo_plato(int tipo_plato) {
-		this.tipo_plato = tipo_plato;
-	}
 
 	public String getDescripcion_plato() {
 		return descripcion_plato;
@@ -76,21 +53,6 @@ public class PlatoEntity {
 		this.imagen = imagen;
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("PlatoEntity [cod_plato=");
-		builder.append(cod_plato);
-		builder.append(", nom_plato=");
-		builder.append(nom_plato);
-		builder.append(", tipo_plato=");
-		builder.append(tipo_plato);
-		builder.append(", descripcion_plato=");
-		builder.append(descripcion_plato);
-		builder.append(", imagen=");
-		builder.append(imagen);
-		builder.append("]");
-		return builder.toString();
-	}
+
 
 }
